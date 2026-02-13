@@ -9,4 +9,8 @@ class Review extends Model
 {
     /** @use HasFactory<\Database\Factories\ReviewFactory> */
     use HasFactory;
+
+    public function products(){
+        return $this->belongsTo(Product::class);
+    }
 }
